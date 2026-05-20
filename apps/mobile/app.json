@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "SubTrackr",
+    "slug": "subtrackr",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#080B14"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.subtrackr.mobile",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSUserNotificationsUsageDescription": "SubTrackr sends renewal alerts before your subscriptions charge."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#080B14"
+      },
+      "package": "app.subtrackr.mobile",
+      "versionCode": 1,
+      "permissions": ["RECEIVE_BOOT_COMPLETED", "VIBRATE"]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-notifications",
+      [
+        "expo-build-properties",
+        {
+          "ios": { "deploymentTarget": "15.0" },
+          "android": { "compileSdkVersion": 34 }
+        }
+      ]
+    ],
+    "scheme": "subtrackr",
+    "extra": {
+      "eas": { "projectId": "YOUR_EAS_PROJECT_ID" }
+    }
+  }
+}

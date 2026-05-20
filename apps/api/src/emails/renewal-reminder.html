@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Renewal Reminder Payment Alert</title>
+  <style>
+    body {
+      background-color: #080B14;
+      color: #FFFFFF;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      width: 100%;
+      background-color: #080B14;
+      padding: 40px 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #0F1322;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      border: 1px solid #1E2640;
+    }
+    .logo-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      background-color: #FF4757;
+      color: #FFFFFF;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+    }
+    p {
+      color: #A0AEC0;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .details-box {
+      background-color: #161B30;
+      border: 1px solid #232C4E;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+    }
+    .details-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      border-bottom: 1px dashed #232C4E;
+      padding-bottom: 12px;
+    }
+    .details-row:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .details-label {
+      color: #718096;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .details-value {
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .btn-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #FF4757 0%, #FF6B81 100%);
+      color: #FFFFFF !important;
+      text-decoration: none;
+      padding: 14px 32px;
+      font-weight: bold;
+      border-radius: 50px;
+      font-size: 16px;
+      box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    }
+    .footer {
+      text-align: center;
+      border-top: 1px solid #1E2640;
+      padding-top: 20px;
+      font-size: 11px;
+      color: #718096;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="logo-container">
+        <div class="logo">!</div>
+      </div>
+      <h1>Billing Renewal Reminder ⚠️</h1>
+      <p>Your subscription is coming up for renewal soon or we encountered an issue with your billing details. Please review the transaction details below:</p>
+      
+      <div class="details-box">
+        <div class="details-row">
+          <span class="details-label">Subscription</span>
+          <span class="details-value">{{subscription_name}}</span>
+        </div>
+        <div class="details-row">
+          <span class="details-label">Amount</span>
+          <span class="details-value">{{amount}}</span>
+        </div>
+        <div class="details-row">
+          <span class="details-label">Renewal Date</span>
+          <span class="details-value">{{renewal_date}}</span>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <a href="https://subtrackr.app/settings" class="btn">Update Payment Method</a>
+      </div>
+
+      <div class="footer">
+        <p>This automated email was sent by SubTrackr App on behalf of your active profiles alerts configuration.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
